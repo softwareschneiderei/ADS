@@ -6,13 +6,17 @@ set(SOURCES
   Log.cpp
   Sockets.cpp
   Frame.cpp
+  standalone/AdsLib.cpp
+  standalone/AmsConnection.cpp
+  standalone/AmsNetId.cpp
+  standalone/AmsPort.cpp
+  standalone/AmsRouter.cpp
+  standalone/NotificationDispatcher.cpp
 )
-
-add_subdirectory(standalone)
 
 add_library(ads ${SOURCES})
 
-target_include_directories(ads INTERFACE .)
+target_include_directories(ads PUBLIC .)
 
 target_compile_features(ads PRIVATE
   cxx_std_11
