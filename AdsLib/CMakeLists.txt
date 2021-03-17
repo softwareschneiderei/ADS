@@ -16,4 +16,7 @@ add_library(ads ${SOURCES})
 
 target_include_directories(ads PUBLIC .)
 
-target_link_libraries(ads PUBLIC Threads::Threads)
+target_link_libraries(ads
+  PUBLIC Threads::Threads
+  PUBLIC Socket::Socket
+)
